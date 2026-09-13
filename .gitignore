@@ -1,0 +1,10 @@
+# Repo signing secrets created by `fdroid init`. Never publish these.
+config.yml
+keystore.p12
+*.jks
+*.keystore
+
+tmp/
+unsigned/
+build/
+.DS_Store

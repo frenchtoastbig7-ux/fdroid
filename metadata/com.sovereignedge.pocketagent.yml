@@ -1,0 +1,30 @@
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: Sovereign Edge Inc.
+SourceCode: https://github.com/frenchtoastbig7-ux/pocket-agent
+IssueTracker: https://github.com/frenchtoastbig7-ux/pocket-agent/issues
+
+Name: Pocket Agent
+Summary: Private on-device Claude agent with memory, skills and automations
+Description: |-
+  Pocket Agent is a personal assistant that runs on your phone and uses Claude as its model. It is built for GrapheneOS and talks to exactly one server: Anthropic's API.
+
+  What it can do, with your permission:
+  * Read and send SMS, look up contacts, read and add calendar events, read the call log and recent notifications
+  * Read and write files in a private workspace folder
+  * Search and read the web
+  * Read the screen and tap, type and scroll in other apps (accessibility service)
+  * Remember you across chats (MEMORY.md / USER.md), write reusable skills, and search past chats
+  * Run scheduled automations that report back in a private notification
+  * Split research into parallel read-only sub-agents
+
+  Anything that sends, taps, types or changes data is shown to you for approval first. Scheduled runs are read-only. The API key is encrypted with the Android Keystore. There are no analytics and no Google Play Services.
+
+  You need your own Anthropic API key.
+
+AntiFeatures:
+  NonFreeNet:
+    en-US: Requires an Anthropic API key. Your prompts and the tool results the agent reads are processed by Anthropic's Claude API.
+
+AutoName: Pocket Agent
