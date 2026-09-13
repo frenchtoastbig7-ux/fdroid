@@ -11,10 +11,22 @@ SOURCE_REPO="frenchtoastbig7-ux/pocket-agent"
 export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
 export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
 AAPT2="$ANDROID_HOME/build-tools/36.0.0/aapt2"
+# fdroid needs apksigner on PATH to sign and verify.
+export PATH="$ANDROID_HOME/build-tools/36.0.0:$PATH"
 
 if [[ ! -f "$REPO_DIR/config.yml" ]]; then
   echo "Run 'fdroid init' in $REPO_DIR first (creates the repo signing key)." >&2
   exit 1
+fi
+
+# Public repo identity (appended once; the signing secrets `fdroid init` wrote are left untouched and never printed).
+if ! grep -q '^repo_url:' "$REPO_DIR/config.yml"; then
+  cat >> "$REPO_DIR/config.yml" <<'YAML'
+
+repo_url: https://frenchtoastbig7-ux.github.io/fdroid/repo
+repo_name: Sovereign Edge
+repo_description: Pocket Agent, a private on-device Claude agent for GrapheneOS, published by Sovereign Edge Inc.
+YAML
 fi
 
 (cd "$APP_DIR" && ./gradlew assembleRelease -Pminify -q)

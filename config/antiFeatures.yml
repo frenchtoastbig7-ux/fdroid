@@ -1,0 +1,3 @@
+NonFreeNet:
+  description: This app promotes or depends entirely on a non-free network service
+  name: Non-Free Network Services
