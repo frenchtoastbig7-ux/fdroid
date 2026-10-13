@@ -1,0 +1,27 @@
+Categories:
+  - Sports & Health
+License: Apache-2.0
+AuthorName: Sovereign Edge Inc.
+SourceCode: https://github.com/frenchtoastbig7-ux/pocket-pantry
+IssueTracker: https://github.com/frenchtoastbig7-ux/pocket-pantry/issues
+
+Name: Pocket Pantry
+Summary: Pantry inventory, barcode grocery cart, shopping list and Claude recipes
+Description: |-
+  Pocket Pantry keeps track of the food in your household and what it costs to replace it. Built for the Pixel 10 Pro and Pro XL.
+
+  * Pantry inventory organised by storage location (Pantry, Counter, Fridge, Freezer or your own) with quantities, expiry dates and low-stock warnings
+  * Cart: pick your grocery store, scan items as they go in the cart and watch the running total with tax. Prices are remembered per store, and finishing a trip can add everything to the pantry
+  * Shopping list that ticks itself off as you scan, and takes low-stock items or a recipe's missing ingredients in bulk
+  * Recipes and meal plans from Claude, unlocked once you add your own Claude API key. Claude is told what you have and what is expiring; replies can be saved and their missing ingredients sent to the list
+  * Light, dark or system theme with Material You colours
+
+  Everything is stored on the phone. The API key is encrypted with the Android Keystore. Barcodes are read on-device with ML Kit's bundled model (no Play Services); unknown barcodes are looked up on Open Food Facts and cached.
+
+AntiFeatures:
+  NonFreeNet:
+    en-US: Recipes require an Anthropic API key; your prompts and your inventory are sent to Anthropic's Claude API. Unknown barcodes are looked up on Open Food Facts.
+  NonFreeDep:
+    en-US: Barcode scanning uses Google's ML Kit library, which is proprietary (bundled model, no Play Services needed).
+
+AutoName: Pocket Pantry
