@@ -1,0 +1,26 @@
+Categories:
+  - Navigation
+License: Apache-2.0
+AuthorName: Sovereign Edge Inc.
+SourceCode: https://github.com/frenchtoastbig7-ux/pocket-concierge
+IssueTracker: https://github.com/frenchtoastbig7-ux/pocket-concierge/issues
+
+Name: Pocket Concierge
+Summary: Offline viewer for self-contained HTML travel itineraries, with Claude
+Description: |-
+  Pocket Concierge keeps your travel itineraries on the phone as single HTML files and shows them offline.
+
+  * Library of itineraries imported with the file picker, "Open with", or Share from Chrome, Drive, Claude or a file manager
+  * Each itinerary keeps its own checklist progress (localStorage, scoped per file) across restarts; pull down to reload
+  * Directions links open natively in Google Maps; other links open in their own apps
+  * Generate with Claude: describe a trip and get a finished itinerary, unlocked once you add your own Claude API key
+  * Claude connector: an MCP server on the phone that lets Claude Code or the Claude app on your computer list, read, add and revise itineraries over your VPN (Tailscale) or USB, protected by a token
+  * Follows system dark mode, edge-to-edge
+
+  Everything is stored on the phone. The API key and connector token are encrypted with the Android Keystore.
+
+AntiFeatures:
+  NonFreeNet:
+    en-US: Generating itineraries requires an Anthropic API key; your trip brief is sent to Anthropic's Claude API. Itineraries may load Google Fonts.
+
+AutoName: Pocket Concierge
