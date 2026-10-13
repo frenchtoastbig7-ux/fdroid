@@ -29,8 +29,8 @@ repo_description: Pocket Agent, a private on-device Claude agent for GrapheneOS,
 YAML
 fi
 
-(cd "$APP_DIR" && ./gradlew assembleRelease -Pminify -q)
-APK="$APP_DIR/app/build/outputs/apk/release/app-release.apk"
+(cd "$APP_DIR" && ./gradlew :app:assembleClaudeRelease -Pminify -q)
+APK="$APP_DIR/app/build/outputs/apk/claude/release/app-claude-release.apk"
 if [[ ! -f "$APK" ]]; then
   echo "No signed release APK. Add the pocketagent.* signing properties to ~/.gradle/gradle.properties." >&2
   exit 1
