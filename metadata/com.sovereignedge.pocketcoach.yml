@@ -1,0 +1,22 @@
+Categories:
+  - Sports & Health
+License: Apache-2.0
+AuthorName: Sovereign Edge Inc.
+SourceCode: https://github.com/frenchtoastbig7-ux/pocket-coach
+IssueTracker: https://github.com/frenchtoastbig7-ux/pocket-coach/issues
+
+Name: Pocket Coach
+Summary: Strength training programs, set logging, 1RM tracking and spreadsheet plan import
+Description: |-
+  Pocket Coach is an open-source strength and conditioning app in the spirit of TrainHeroic: a coach writes a program, the athlete follows it day by day, logs every set and watches their numbers move.
+
+  * Today: a week strip with the session your program puts on each day, one tap from starting
+  * Programs: weeks x days of sessions made of blocks (supersets) with per-set prescriptions as % of 1RM, RPE or a fixed load
+  * Workout logging with targets already turned into kilos or pounds, a rest timer and automatic estimated one-rep maxes
+  * Library of about 90 exercises plus your own, each with a 1RM, an e1RM chart and full history
+  * Progress: totals, a 12-week volume chart, records and history
+  * Import a training plan from a CSV or Excel spreadsheet, or a Pocket Coach program file; export programs to share with athletes
+
+  Everything stays on the phone: no account, no server, no analytics, and the app has no network permission.
+
+AutoName: Pocket Coach
